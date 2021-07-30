@@ -2,8 +2,6 @@ package cs445.rec11;
 
 import java.util.List;
 import java.util.Scanner;
-import java.io.FileReader;
-import java.nio.file.Paths;
 
 /**
  A class to demonstrate the usage of the methods built in MapLandmarks.
@@ -16,7 +14,7 @@ public class Demo{
 
 	    public static void main(String[] args){
 			List<String> lines = CSVReader.readIn("landmarks.txt");
-			MapLandmarks<String> map = new MapLandmarks<String>();
+			MapLandmarks map = new MapLandmarks();
 
 			// remove header line from List of strings
 			lines.remove(0);
@@ -29,17 +27,17 @@ public class Demo{
 				Double secondComponent = Double.valueOf(eachLandMark[2]);
 				map.addLandmark(name, firstComponent* Math.pow(10,6), secondComponent* Math.pow(10,6));
 			}
-			
+
 
 			Scanner scanner = new Scanner(System.in);
-			
+
 
 			int userInput = -1;
 			String str = "";
 			double latitude = 0;
 			double longitude = 0;
 
-			
+
 			while (userInput != 5){
 				userDisplay();
 				try{
@@ -48,7 +46,7 @@ public class Demo{
 				}catch (Exception error){
 					System.out.println("Enter a valid option");
 				}
-			
+
 				switch (userInput){
 					case 1:
 						System.out.println("Please enter the landmark name");
@@ -71,7 +69,7 @@ public class Demo{
 						break;
 
 					case 3:
-						// print all landmarks 
+						// print all landmarks
 						map.printAllLandmarks();
 						break;
 

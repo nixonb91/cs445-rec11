@@ -5,19 +5,19 @@ import java.util.Iterator;
 
 /**
  A class to demonstrate the usage of dictionaries methods,
- it uses keys as Tuples to map landmarks. 
+ it uses keys as Tuples to map landmarks.
  @author William C. Garrison III
  @author Brian T. Nixon
  @author Norhan Abbas
  */
 
 
-public class MapLandmarks<V> extends HashingDictionary<Tuple, V>{
+public class MapLandmarks extends HashingDictionary<Tuple, String>{
 
 		public MapLandmarks(){
 			// invoke HashingDictionary constructor
 			super();
-		} 
+		}
 
 		/**
 		 * Adds a new landmark and tuple of coordinates to the hashingdictionary
@@ -25,8 +25,8 @@ public class MapLandmarks<V> extends HashingDictionary<Tuple, V>{
 		 * @param firstComponent the first component of the coordinate
 		 * @param secondComponent the second component of the coordinate
 		 */
-		public void addLandmark(V value, double firstComponent, double secondComponent){
-			// TODO: implement this method 
+		public void addLandmark(String value, double firstComponent, double secondComponent){
+			// TODO: implement this method
 			// to add a pair of a landmark and its key (which has 2 components)
 		}
 
@@ -36,7 +36,7 @@ public class MapLandmarks<V> extends HashingDictionary<Tuple, V>{
 		 * @param secondComponent the second component of the coordinate
 		 * @return returns the removed landmark value of the specified coordinates
 		 */
-		public V remove(double firstComponent, double secondComponent) {
+		public String remove(double firstComponent, double secondComponent) {
 			Tuple keyToFind = new Tuple(firstComponent, secondComponent);
 			return super.remove(keyToFind);
 		}
@@ -46,7 +46,7 @@ public class MapLandmarks<V> extends HashingDictionary<Tuple, V>{
 		 * Consider: Why are we unable to remove all cases of value here?
 		 * @param value the landmark value to remove
 		 */
-		public void removeLandmark(V value){
+		public void removeLandmark(String value){
 			// TODO: implement this method using itertors to remove a landmark
 		}
 
@@ -56,7 +56,7 @@ public class MapLandmarks<V> extends HashingDictionary<Tuple, V>{
 		 * @param secondComponent second component of the coordinate
 		 * @return the associated value for the specified coordinate
 		 */
-		public V getValue(double firstComponent, double secondComponent) {
+		public String getValue(double firstComponent, double secondComponent) {
 			Tuple keyToGet = new Tuple(firstComponent, secondComponent);
 			return super.getValue(keyToGet);
 		}

@@ -22,7 +22,7 @@ import cs445.rec11.Tuple;
  */
 public class DictionaryTest {
 
-	MapLandmarks<String> dictionary_test = new MapLandmarks<String>();
+	MapLandmarks dictionary_test = new MapLandmarks();
 
 	Tuple key1 = new Tuple(1,2);
     Tuple key2 = new Tuple(100,200);
@@ -32,7 +32,7 @@ public class DictionaryTest {
 
     @BeforeEach
     public void setup() {
-    	dictionary_test = new MapLandmarks<String>();
+    	dictionary_test = new MapLandmarks();
     }
 
     @AfterEach
@@ -56,7 +56,7 @@ public class DictionaryTest {
     	assertTrue(dictionary_test.getValue(1, 2).equals("this"));
     	assertTrue(dictionary_test.getValue(100, 200).equals("is"));
     	assertTrue(dictionary_test.getValue(1.99998, 2.9997).equals("CS"));
-    	assertTrue(dictionary_test.getValue(1000.99998, 2000.9997).equals("445"));    	
+    	assertTrue(dictionary_test.getValue(1000.99998, 2000.9997).equals("445"));
     }
 
     @Test
@@ -77,7 +77,7 @@ public class DictionaryTest {
     	assertNull(dictionary_test.getValue(key2));
     	assertNull(dictionary_test.getValue(key3));
     	assertNull(dictionary_test.getValue(key4));
-    	
+
     }
 }
 

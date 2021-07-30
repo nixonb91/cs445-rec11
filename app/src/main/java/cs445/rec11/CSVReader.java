@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 public class CSVReader{
 
 	static List<String> readIn(String filename){
-		
+
 		List<String> allData = null;
 		try{
 			allData = Files.readAllLines(Paths.get("build/resources/main/" + filename), Charset.defaultCharset());
@@ -22,3 +22,4 @@ public class CSVReader{
 		return allData;
 	}
 }
+

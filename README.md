@@ -5,7 +5,7 @@
 In this recitation, you will write several methods in the class, `MapLandmarks.java`, that extends a double-hashing implementation of the Dictionary ADT. This class will allow a client to store landmarks and their coordinates in a Dictionary data structure. We have provided a list of some famous landmarks in PA in the file `landmarks.txt`. Our program utilizes the Dictionary ADT by using the latitude and longitude pair as the key and the landmark name as the value. The latitude and longitude are wrapped in the class `Tuple` which will represent the key used by `MapLandmarks.java`. Using the Tuple class:
    - introduces the 2 components of the key in a convenient wrapper class; latitude and longitude.
    - overrides the `equals` method to make sure that the 2 components of the key are considered when comparing.
-   - overrides the `hashCode` method such that Horner's method is applied on each component separately, then their results are added mitigating the risk of losing numeric information (sure, we don't have that much information to lose considering that our .txt file doesn't have hundreds of landmarks, but it's a good practice to be aware of).
+   - overrides the `hashCode` method such that Horner’s method is applied on each component separately, then their results are added mitigating the risk of losing numeric information (sure, we don’t have that much information to lose considering that our .txt file doesn’t have hundreds of landmarks, but it’s a good practice to be aware of).
 
 You will write three methods for your dictionary of landmarks: a method to add a new landmark (`addLandmark`), another one to remove an existing landmark (`removeLandmark`), and a third one to print all the landmarks (the ones imported from the .txt file along with any added ones considering the removed ones—if any).
 
@@ -29,12 +29,12 @@ found in the usual location. Note the following provided Java files:
 3. In the same class, write the method `void removeLandmark(V value)`, which removes a value and its associated key from our dictionary pairs.
 
 4. Check if the previous 2 methods work as expected using `./gradlew test` (or `gradlew.bat test` on DOS-based terminals), which will run
-the unit tests we provided you with. Note: it's better to run ./gradlew test after writing each method, so that you will be able to debug your methods separately.
+the unit tests we provided you with. Note: it’s better to run ./gradlew test after writing each method, so that you will be able to debug your methods separately.
 
 5. Lastly, write the method `public void printAllLandmarks()`, which prints all
 landmarks your dictionary has. Hint: Consider using an iterator for this task.
 
-6. Test that your last method works as expected using `./gradlew run` and choosing "3. Print all landmarks" on the console menu. Now compare what's printed on the screen to what is contained in the landmark.txt file (in `app/src/main/resources/`.) They should be the same unless you inserted or removed any of the existing landmarks.
+6. Test that your last method works as expected using `./gradlew run` and choosing “3. Print all landmarks” on the console menu. Now compare what’s printed on the screen to what is contained in the landmark.txt file (in `app/src/main/resources/`.) They should be the same unless you inserted or removed any of the existing landmarks.
 
 ## Conclusion
 
